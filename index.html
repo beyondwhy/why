@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Edu+VIC+WA+NT+Hand+Pre:wght@400..700&family=Jersey+15&display=swap');
+    body {
+      font-family: 'Jersey 15', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #1a1a2e;
+      color: #eee;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(119, 198, 255, 0.3) 0%, transparent 50%);
+      animation: float 20s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      33% { transform: translateY(-20px) rotate(120deg); }
+      66% { transform: translateY(20px) rotate(240deg); }
+    }
+    .container {
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    h1 {
+      font-size: 4em;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    
+    @keyframes glow {
+      from { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(120, 119, 198, 0.5); }
+      to { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 30px rgba(120, 119, 198, 0.8); }
+    }
+    
+    p {
+      font-size: 2em;
+      margin: 20px 0;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    
+    .python-section {
+      margin-top: 40px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .dots {
+      display: inline-block;
+    }
+    
+    .dots::after {
+      content: '';
+      animation: dots 1.5s infinite;
+    }
+    
+    @keyframes dots {
+      0%, 20% { content: ''; }
+      40% { content: '.'; }
+      60% { content: '..'; }
+      80%, 100% { content: '...'; }
+    }
+    
+    .discord-section {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+    
+    .discord-logo {
+      width: 50px;
+      height: 50px;
+      transition: transform 0.3s ease;
+    }
+    
+    .discord-logo:hover {
+      transform: scale(1.1);
+    }
+    
+    .discord-link {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      background: rgba(88, 101, 242, 0.2);
+      transition: all 0.3s ease;
+    }
+    
+    .discord-link:hover {
+      background: rgba(88, 101, 242, 0.4);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome!</h1>
+    <p class="intro-text">Hi there, I'm known as <span class="name">Why</span>.</p>
+    
+    <div class="python-section">
+      <p>🐍 I'm currently learning python<span class="dots"></span></p>
+    </div>
+    
+    <div class="discord-section">
+      <a href="https://discord.com/users/830490901062352917" target="_blank" class="discord-link">
+        <img src="/home/taha/Desktop/discord.png" alt="Discord" class="discord-logo">
+        <span>Find me on Discord</span>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
